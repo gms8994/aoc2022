@@ -19,30 +19,21 @@ $round_points = [
 $map = [
     // Rock is played
     'A' => [
-        // Rock is returned
-        'X' => $shape_points['X'] + $round_points['draw'],
-        // Paper is returned
-        'Y' => $shape_points['Y'] + $round_points['win'],
-        // Scissor is returned
-        'Z' => $shape_points['Z'] + $round_points['lose'],
+        'Y' => $shape_points['X'] + $round_points['draw'],
+        'Z' => $shape_points['Y'] + $round_points['win'],
+        'X' => $shape_points['Z'] + $round_points['lose'],
     ],
     // Paper is played
     'B' => [
-        // Rock is returned
         'X' => $shape_points['X'] + $round_points['lose'],
-        // Paper is returned
         'Y' => $shape_points['Y'] + $round_points['draw'],
-        // Scissor is returned
         'Z' => $shape_points['Z'] + $round_points['win'],
     ],
     // Scissors is played
     'C' => [
-        // Rock is returned
-        'X' => $shape_points['X'] + $round_points['win'],
-        // Paper is returned
-        'Y' => $shape_points['Y'] + $round_points['lose'],
-        // Scissor is returned
-        'Z' => $shape_points['Z'] + $round_points['draw'],
+        'Z' => $shape_points['X'] + $round_points['win'],
+        'X' => $shape_points['Y'] + $round_points['lose'],
+        'Y' => $shape_points['Z'] + $round_points['draw'],
     ],
 ];
 

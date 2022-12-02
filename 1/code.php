@@ -17,4 +17,6 @@ foreach ($elf_input as $elf) {
 assert($per_elf[4] === 26247);
 
 rsort($per_elf, SORT_NUMERIC);
-print $per_elf[0];
+print $per_elf[0] . "\n";
+
+print array_sum(array_slice($per_elf, 0, 3)) . "\n";
